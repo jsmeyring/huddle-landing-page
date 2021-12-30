@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    /*fonts*/
+    --heading_font: 'Poppins', sans-serif; /*Headings*/
+    --body-font: 'Open Sans', sans-serif; /*Body*/
+    /*Primary*/
+    --Violet: hsl(257, 40%, 49%); /*body*/
+    --Soft-Magenta: hsl(300, 69%, 71%); /**/
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Violet);
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: var(--body-font);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    max-width: 1230px;
+    display: grid;
+    grid-template-areas: 
+    "hd hd"
+    "mc mc"
+    "ft ft";
+    grid-template-columns: 2 1fr;
+}
+img{
+    width: 100%;
+}
+.header{
+    grid-area: hd;
+    padding: 50px 0 80px;
+}
+.header img{
+    width: 200px;
+}
+.main-card{
+    grid-area: mc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 50px;
+    
+}
+.card-img{
+    max-width: 850px;
+}
+.summary{
+    max-width: 510px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+h1{
+    font-family: var(--heading_font);
+    font-size: 40px;
+    font-weight: 600;
+}
+.summary p{
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 0;
+    justify-content: right;
+}
+.button{
+    margin-right: 300px;
+}
+button{
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+    border: none;
+    font-family: var(--heading_font);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Violet);
+    justify-content: left;
+}
+.footer{
+    grid-area: ft;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "fot icon";
+    grid-template-columns: 2 1fr;
+    color: black;
+}
+.icons{
+    grid-area: icon;
+}
+.footer img{
+    width: 30px;
+}
+.info{
+    grid-area: fot;
+}
+.info a{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 670px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(../images/bg-mobile.svg);
+    }
+    main{
+    
+        display: grid;
+        grid-template-areas: 
+        "hd"
+        "mc"
+        "ft";
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    img{
+        width: 100%;
+    }
+    h1{
+        text-align: center;
+        font-size: 25px;
+        padding: 40px 0 0 0;
+    }
+    .summary p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .header{
+        grid-area: hd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .header img{
+        max-width: 130px;
+        margin-right: 130px;
+    }
+    .main-card{
+        grid-area: mc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .summary{
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    button{
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        border: none;
+        font-family: var(--heading_font);
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--Violet);
+        justify-content: left;
+    }
+    .footer{
+        grid-area: ft;
+        display: grid;
+        grid-template-areas: 
+        "icon" 
+        "fot";
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    .icons{
+        grid-area: icon;
+        display: flex;
+        justify-content: center;
+    }
+    .info{
+        grid-area: fot;
+        display: flex;
+        justify-content: center;
+    }
+    
